@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="../vue.js"></script>
+</head>
+<body>
+
+    <div id="intro">
+        <h2>{{person}}</h2>
+        <h2>{{dataPerson()}}</h2>
+        <h2>{{ dataPersonComputed }}</h2>
+        <h2>
+            Method: {{dataPerson()}}
+        </h2>
+        <h2>
+            Computed: {{dataPersonComputed}}
+        </h2>
+
+        <h2>{{fullNameComputed}}</h2>
+        <h2 v-if='enabled'>Transformado {{balance | euros()}}</h2>
+        <button v-bind:disabled='balance>10'>ola</button>
+    </div>
+
+
+    <script src="index.js"></script>
+</body>
+</html>
