@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="../../vue.js"></script>
+</head>
+
+<body>
+    <div id="intro">
+        <h2 v-bind:style="style" v-show="visibility">{{msg}}</h2>
+        <button v-on:click="readButton">Red</button>
+        <button v-on:click="readButton">Big</button>
+        <button v-on:click="readButton">Yellow</button>
+        <button v-on:click="readButton">{{showHide}}</button>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+
+</html>

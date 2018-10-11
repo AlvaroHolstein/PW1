@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="../../vue.js"></script>
+</head>
+
+<body>
+
+    <div id="intro">
+        <ul v-once>
+            <li v-for='team in teams'>
+                Name: {{team.name}} AND year: {{team.year}}
+            </li>
+        </ul>
+
+        <br>
+        <br>
+        <br>
+
+        <table class="table table-dark">
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>NAME</th>
+                    <th>YEAR</th>
+                    <th>Location</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr v-for='(team, index, key) in teams'>
+                    <td>{{index+1}}</td>
+                    <td>{{team.name}}</td>
+                    <td>{{team.year}}</td>
+                    <td>{{team.location}}</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <br><br>
+
+        <button v-on:click='pushTeam()'>Adicionar</button>
+        <button v-on:click='locationFilter()'>Filtrar</button>
+    </div>
+    <script src="index.js"></script>
+</body>
+
+</html>
