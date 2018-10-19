@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="../vue.js"></script>
+</head>
+
+<body>
+
+    <div id="intro">
+        <h2>Checkbox</h2>
+        <input type="checkbox" v-model="checked" value="1"> 1
+        <input type="checkbox" v-model="checked" value="2"> 2
+        <input type="checkbox" v-model="checked"> 3
+
+        <h2>{{checked}}</h2>
+
+        <h2>Radio Button</h2>
+        <!-- Para estar check a variavel do Vue tem que ter o mesmo valor que o input -->
+        <input type="radio" value="false" v-model="checked2">
+        <input type="radio" value="true" v-model="checked2">
+
+        <h2>Select</h2>
+        <select v-model="selected" multiple>
+            <option disabled value=""> Seleciona </option>
+            <option>A</option>
+            <option>B</option>
+            <option>C</option>
+        </select>
+
+        <h2>Escolhido: {{selected}}</h2>
+
+        <h2>MAis selects</h2>
+        <select v-model="selected" multiple>
+            <option disabled value=""> Seleciona </option>
+            <option v-for="option in options" 
+            v-bind:value="option">{{option}}</option>
+        </select>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+
+</html>
